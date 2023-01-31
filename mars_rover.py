@@ -6,12 +6,20 @@ class MarsRover:
         row = [None] * columns
         self.grid = [row] * rows
 
-    def place_rover(self, row, column, facing):
-        self.grid = [
-            [None, None],
-            ['N', None]
-        ]
-
     def view_grid(self):
         return self.grid
+
+    def place_rover(self, row, column, facing):
+        if column == 0:
+            self.grid = [
+                ['N', None],
+                [None, None]
+            ]
+        else:  
+            self.grid = [
+                [None, None],
+                ['N', None]
+            ]
+
+
         
