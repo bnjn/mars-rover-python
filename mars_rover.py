@@ -11,11 +11,17 @@ class MarsRover:
 
     def place_rover(self, row, column, facing):
         if column == 0:
-            self.grid = [
-                ['N', None],
-                [None, None]
-            ]
-        else:  
+            self.grid[0][0] = 'N' # this fails (gives us two 'N's in the grid)
+
+            # this version works
+            # self.grid[0] = ['N', None]
+            
+            # this version works
+            # self.grid = [
+            #     ['N', None],
+            #     [None, None]
+            # ]
+        else:
             self.grid = [
                 [None, None],
                 ['N', None]
