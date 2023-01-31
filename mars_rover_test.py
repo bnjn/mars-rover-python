@@ -26,6 +26,14 @@ class TestMarsRover(unittest.TestCase):
 
         self.assertEqual(mars_rover.view_grid(), [[None, None], [None, None]])
 
+    def test_generate_non_square_grid(self):
+        mars_rover = MarsRover()
+        mars_rover.generate_grid(2, 3)
+        expected_grid = [
+          [None, None, None],
+          [None, None, None]
+        ]
+        self.assertEqual(mars_rover.view_grid(), expected_grid)
 
 if __name__ == '__main__':
     unittest.main()
